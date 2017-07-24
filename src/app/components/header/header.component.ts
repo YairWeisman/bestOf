@@ -13,9 +13,9 @@ export class HeaderComponent {
     this.definitions = this.definitionsService.getDef();
   }
 
-  definitions: JSON;
-  private showDef = false;
-  private def: String;
+  definitions: any;
+  showDef = false;
+  def: String;
 
   getDef() {
     this.showDef = true;
