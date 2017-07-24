@@ -7,5 +7,12 @@ import {Component, Input} from '@angular/core';
 })
 export class GenreInfoComponent {
   @Input() year: any;
+  @Input() genre: any;
+  genreInfo = 'about the genre...';
+  showInfo = false;
 
+  constructor() {
+    this.genre = 'Pop';
+  }
 }
+
