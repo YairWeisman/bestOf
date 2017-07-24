@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { GraphComponent } from './components/graph/graph.component';
+import { GenreInfoComponent } from './components/genre-info/genre-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    GraphComponent,
+    GenreInfoComponent
   ],
   imports: [
     BrowserModule,

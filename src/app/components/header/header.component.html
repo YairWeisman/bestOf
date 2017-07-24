@@ -1,4 +1,15 @@
-<p>
-  header works!
-</p>
-<button class="btn btn-sm btn-outline-primary">btn</button>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-2">The Genre Of The Year</h1>
+    <hr>
+    <p class="lead">As a part of Digital Humanities research we mapped the last 70 years to their favorite genre.</p>
+    <div>
+      <a class="btn btn-primary btn-lg"  href="#" role="button">Research Result</a>
+      <a class="btn btn-default btn-lg"  (click)="getDef()" role="button">What is Digital Humanities?</a>
+    </div>
+  </div>
+  <div class="container" *ngIf="showDef">
+    <p class="blockquote">{{ def }}</p>
+    <a class="btn btn-default btn-sm"  (click)="getDef()" role="button">Another definition &raquo;</a>
+  </div>
+</div>
