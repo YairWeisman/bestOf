@@ -1,13 +1,12 @@
-<!--<div>-->
-  <!--<div style="display: block">-->
-    <!--<canvas baseChart-->
-            <!--[datasets]="barChartData"-->
-            <!--[labels]="barChartLabels"-->
-            <!--[options]="barChartOptions"-->
-            <!--[legend]="barChartLegend"-->
-            <!--[chartType]="barChartType"-->
-            <!--(chartHover)="chartHovered($event)"-->
-            <!--(chartClick)="chartClicked($event)"></canvas>-->
-  <!--</div>-->
-  <!--<button (click)="randomize()">Update</button>-->
-<!--</div>-->
+<div class="container">
+  <h1 class="display-4">The genre of {{ year }} is {{ genre }}</h1>
+  <br>
+  <!--Div that will hold the dashboard-->
+  <div id="dashboard_div" class="row">
+    <!--Divs that will hold each control and chart-->
+    <div id="filter_div" class="col-sm-6"></div>
+    <div id="filter_div2" class="col-sm-6"></div>
+    <div id="chart_div"></div>
+  </div>
+  <hr>
+</div>

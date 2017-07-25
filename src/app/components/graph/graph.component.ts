@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./graph.component.css']
 })
 export class GraphComponent {
+  year = '1999';
+  genre = 'Pop';
+
   // public barChartOptions:any = {
   //   scaleShowVerticalLines: false,
   //   responsive: true
