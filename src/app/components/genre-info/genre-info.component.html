@@ -1,6 +1,6 @@
 <div class="container">
   <div class="jumbotron align-center">
-    <p *ngIf="!showInfo"><a class="btn btn-info" role="button" (click)="showInfo = !showInfo">Learn about {{ genre }}</a></p>
+    <p *ngIf="!showInfo"><a class="btn btn-primary btn-lg" role="button" (click)="showInfo = !showInfo">Learn about {{ genre }}</a></p>
     <div *ngIf="showInfo">
       <h1 class="display-4"><a class="">{{ genre }}</a></h1>
       <hr>
