@@ -54,14 +54,13 @@
         'state': {'lowValue': 3, 'highValue': 8}
       });
       var donutRangeSlider2 = new google.visualization.ControlWrapper({
-        'controlType': 'NumberRangeFilter',
+        'controlType': 'StringFilter',
         'containerId': 'filter_div2',
         'options': {
-          'filterColumnLabel': 'Donuts eaten',
-          'minValue': 1,
-          'maxValue': 10
+          'filterColumnIndex': 0,
+          'matchType': 'any'
         },
-        'state': {'lowValue': 3, 'highValue': 8}
+        'state': {'value':'Michael'}
       });
 
       // Create a pie chart, passing some options
@@ -84,6 +83,12 @@
 
       // Draw the dashboard.
       dashboard.draw(data);
+
+//      event handle: statechange
+//      newState = ControlWrapper.getState()
+//      donutRangeSlider.setState(newState)
+//      donutRangeSlider.draw();
+
     }
   </script>
 </head>
