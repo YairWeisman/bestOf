@@ -13,13 +13,15 @@ export class HeaderComponent {
     this.definitions = this.definitionsService.getDef();
   }
 
-  definitions: any;
+  definitions: any[];
   showDef = false;
   def: String;
+  i = 0;
 
   getDef() {
     this.showDef = true;
-    this.def = 'BLA ';
+    this.def = this.definitions[this.i].definition;
+    this.i++;
   }
 
 
