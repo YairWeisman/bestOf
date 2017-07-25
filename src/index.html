@@ -48,10 +48,23 @@
           'ui': {'label':'Number of songs range', 'labelSeparator': ':'},
           'filterColumnIndex': 2,
           'minValue': 0,
-          'maxValue': 100
+          'maxValue': 100,
+          'fontName' : 'Segoe UI'
         },
         'state': {'lowValue': 0, 'highValue': 100}
       });
+      var GenreFilter = new google.visualization.ControlWrapper({
+        'controlType': 'StringFilter',
+        'containerId': 'filter_div2',
+        'options': {
+          'ui': {'label':'Genre filter', 'labelSeparator': ':'},
+          'filterColumnIndex': 0,
+          'matchType': 'any',
+          'fontName' : 'Segoe UI'
+        },
+        'state': {'value':''}
+      });
+
       // Create a pie chart, passing some options
       var CandlestickChart = new google.visualization.ChartWrapper({
           'chartType': 'CandlestickChart',
@@ -62,24 +75,15 @@
             'animation.duration': 500,
             'animation.easing': 'inAndOut',
             'animation.startup': true,
-            'hAxis': {'title': 'Genre', 'titleTextStyle': { 'fontSize': 20, 'bold': true, 'italic': false  } },
-            'vAxis': {'title': 'Number of songs', 'titleTextStyle': { 'fontSize': 20, 'bold': true, 'italic': false } },
+            'hAxis': {'title': 'Genre', 'titleTextStyle': { 'fontSize': 20, 'bold': false, 'italic': false  } },
+            'vAxis': {'title': 'Number of songs', 'titleTextStyle': { 'fontSize': 20, 'bold': false, 'italic': false } },
             'tooltip': {'showColorCode': false, 'trigger': 'none'},
-            'legend' : {'position':'none'}
+            'legend' : {'position':'none'},
+            'fontName' : 'Segoe UI'
         }
 //        'view': {'colums': [0,1]}
       });
 
-      var GenreFilter = new google.visualization.ControlWrapper({
-        'controlType': 'StringFilter',
-        'containerId': 'filter_div2',
-        'options': {
-          'ui': {'label':'Genre filter', 'labelSeparator': ':'},
-          'filterColumnIndex': 0,
-          'matchType': 'any'
-        },
-        'state': {'value':''}
-      });
 
 
       // Establish dependencies, declaring that 'filter' drives 'pieChart',
