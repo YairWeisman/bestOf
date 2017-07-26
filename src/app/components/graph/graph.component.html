@@ -4,8 +4,7 @@
     <div id="filter_div2"></div>
   </div>
   <div class="row">
-    <h1 class="col-7 display-4">The most popular genre is</h1>
-    <h1 class="col-2 display-3" >{{genre}}</h1>
+    <h1 class="col-11 display-4">The most popular genre of {{yearSelected}} is {{genre}}</h1>
     <a class="col-1 btn btn-default align-next-to" (click)="learn()" role="button">learn about {{genre}} &raquo;</a>
   </div>
   <div class="row" *ngIf="showMore">
