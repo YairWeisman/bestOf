@@ -1,7 +1,7 @@
 google.charts.load('current', {'packages':['corechart', 'controls']});
 google.charts.setOnLoadCallback(drawDashboard);
 
-yearSelected = '';
+var yearSelected = '';
 
 function drawDashboard() {
 
@@ -16,29 +16,28 @@ function drawDashboard() {
   var dashboard = new google.visualization.Dashboard(
     document.getElementById('dashboard_div'));
 
-  // Create a range slider, passing some options
-  var numberRangeSlider = new google.visualization.ControlWrapper({
-    'controlType': 'NumberRangeFilter',
-    'containerId': 'filter_div',
-    'options': {
-      'ui': {
-        'label':'Set a year range',
-        'labelSeparator': ':',
-        'format': {pattern:'####'}
-      },
-      'filterColumnIndex': 0,
-      'minValue': 1940,
-      'maxValue': 2016,
-      'fontName' : 'Segoe UI'
-    },
-    'state': {'lowValue': 1940, 'highValue': 2016}
-  });
+  // var numberRangeSlider = new google.visualization.ControlWrapper({
+  //   'controlType': 'NumberRangeFilter',
+  //   'containerId': 'filter_div',
+  //   'options': {
+  //     'ui': {
+  //       'label':'Set a year range',
+  //       'labelSeparator': ':',
+  //       'format': {pattern:'####'}
+  //     },
+  //     'filterColumnIndex': 0,
+  //     'minValue': 1940,
+  //     'maxValue': 2016,
+  //     'fontName' : 'Segoe UI'
+  //   },
+  //   'state': {'lowValue': 1940, 'highValue': 2016}
+  // });
   var YearFilter = new google.visualization.ControlWrapper({
     'controlType': 'StringFilter',
     'containerId': 'filter_div2',
     'options': {
       'ui': {
-        'label':'Select a year in the range (optional)',
+        'label':'Select a year',
         'labelSeparator': ':'
       },
       'filterColumnIndex': 0,
@@ -73,13 +72,14 @@ function drawDashboard() {
 
 
 
-  dashboard.bind([numberRangeSlider,YearFilter], MaterialChart);
+  dashboard.bind([
+    // numberRangeSlider,
+    YearFilter], MaterialChart);
   dashboard.draw(data);
 
   google.visualization.events.addListener(YearFilter, 'statechange', stateChangeHandler);
   function stateChangeHandler() {
-    var newState = YearFilter.visualization.K.value;
-    yearSelected = newState;
+    yearSelected = YearFilter.visualization.K.value;
   }
 }
 
