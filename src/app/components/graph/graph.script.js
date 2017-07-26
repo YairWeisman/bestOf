@@ -1,25 +1,15 @@
-
-// Load the Visualization API and the controls package.
 google.charts.load('current', {'packages':['corechart', 'controls']});
-
-// Set a callback to run when the Google Visualization API is loaded.
 google.charts.setOnLoadCallback(drawDashboard);
 
-// Callback that creates and populates a data table,
-// instantiates a dashboard, a range slider and a pie chart,
-// passes in the data and draws it.
+yearSelected = '';
+
 function drawDashboard() {
 
-  // Create our data table.
   var data = google.visualization.arrayToDataTable([
-    ['Name', 'Donuts eaten'],
-    ['Michael' , 5],
-    ['Elisa', 7],
-    ['Robert', 3],
-    ['John', 2],
-    ['Jessica', 6],
-    ['Aaron', 1],
-    ['Margareth', 8]
+    ['Year', 'Pop', 'Rock', 'Jazz'],
+    [2016, 51, 24, 25],
+    [2015, 20, 72, 8],
+    [2014, 5, 5, 90]
   ]);
 
   // Create a dashboard.
@@ -27,31 +17,69 @@ function drawDashboard() {
     document.getElementById('dashboard_div'));
 
   // Create a range slider, passing some options
-  var donutRangeSlider = new google.visualization.ControlWrapper({
+  var numberRangeSlider = new google.visualization.ControlWrapper({
     'controlType': 'NumberRangeFilter',
     'containerId': 'filter_div',
     'options': {
-      'filterColumnLabel': 'Donuts eaten'
-    }
+      'ui': {
+        'label':'Set a year range',
+        'labelSeparator': ':',
+        'format': {pattern:'####'}
+      },
+      'filterColumnIndex': 0,
+      'minValue': 1940,
+      'maxValue': 2016,
+      'fontName' : 'Segoe UI'
+    },
+    'state': {'lowValue': 1940, 'highValue': 2016}
+  });
+  var YearFilter = new google.visualization.ControlWrapper({
+    'controlType': 'StringFilter',
+    'containerId': 'filter_div2',
+    'options': {
+      'ui': {
+        'label':'Select a year in the range (optional)',
+        'labelSeparator': ':'
+      },
+      'filterColumnIndex': 0,
+      'matchType': 'any',
+      'fontName' : 'Segoe UI'
+    },
+    'state': {'value': this.yearSelected }
   });
 
   // Create a pie chart, passing some options
-  var pieChart = new google.visualization.ChartWrapper({
-    'chartType': 'PieChart',
+  var MaterialChart = new google.visualization.ChartWrapper({
+    'chartType': 'ColumnChart',
     'containerId': 'chart_div',
     'options': {
-      'width': 500,
-      'height': 500,
-      'pieSliceText': 'value',
-      'legend': 'right'
+      'width': 1224,
+      'height': 220,
+      'series': {
+        '0': {'axis': 'number of Pop songs'},
+        '1': {'axis': 'number of Rock songs'},
+        '2': {'axis': 'number of Jazz songs'}
+      },
+      'vAxes': {
+        0: {'title': 'Number of songs per genre'}
+      },
+      'hAxis': {
+        'title': 'Year',
+        'format': '####',
+        'gridlines': {'count': '0'}
+      }
     }
   });
 
-  // Establish dependencies, declaring that 'filter' drives 'pieChart',
-  // so that the pie chart will only display entries that are let through
-  // given the chosen slider range.
-  dashboard.bind(donutRangeSlider, pieChart);
 
-  // Draw the dashboard.
+
+  dashboard.bind([numberRangeSlider,YearFilter], MaterialChart);
   dashboard.draw(data);
+
+  google.visualization.events.addListener(YearFilter, 'statechange', stateChangeHandler);
+  function stateChangeHandler() {
+    var newState = YearFilter.visualization.K.value;
+    yearSelected = newState;
+  }
 }
+

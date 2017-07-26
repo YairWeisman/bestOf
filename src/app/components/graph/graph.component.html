@@ -1,16 +1,19 @@
-<div class="container">
+<div id="dashboard_div" class="container">
   <div class="row">
-    <h1 class="col-4 display-4">The genre of</h1>
-    <input class="col-2 form-control" type="number" placeholder="year" [(ngModel)]="year">
-    <h1 class="col-6 display-4" >is {{genre}}</h1>
+    <div id="filter_div" class="col-6"></div>
+    <div id="filter_div2" class="col-6"></div>
+  </div>
+  <div class="row">
+    <h1 class="col-7 display-4">The most popular genre is</h1>
+    <h1 class="col-2 display-3" >{{genre}}</h1>
+    <a class="col-1 btn btn-default align-next-to" (click)="learn()" role="button">learn about {{genre}} &raquo;</a>
+  </div>
+  <div class="row" *ngIf="showMore">
+    <br>
+    <p class="blockquote def">{{ about }}</p>
+    <a class="btn btn-default btn-sm align-next-to" (click)="showMore = !showMore" role="button">hide &raquo;</a>
   </div>
   <br>
-  <!--Div that will hold the dashboard-->
-  <div id="dashboard_div" class="row">
-    <!--Divs that will hold each control and chart-->
-    <div id="filter_div2" class="col-sm-6"></div>
-    <div id="filter_div" class="col-sm-6"></div>
-    <div id="chart_div" class="row"></div>
-  </div>
-  <hr>
+  <div id="chart_div" class="row"></div>
 </div>
+
