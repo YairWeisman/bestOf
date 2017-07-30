@@ -37,9 +37,6 @@ export class DefinitionsService {
       'definition': 'The humanities in and for a digital age'
     },
     {
-      'definition': 'Previously, I defined DH as an umbrella term for something like the use of technology to study human cultures and the study of the effects of digital technology on human cultures. Today, I would add that DH has (or should have) a self-conscious reflection on the technical aspects of these endeavours, whether that means acquiring and making use of the programming skills to produce new tools for digital study of human culture, examining the methodological problems of using these tools, or theorising the way their underlying technologies affect human society and the material objects of human culture. That said, I am worried that the theorising of the Digital Humanities, the development of infrastructure to support the Digital Humanities, and the opportunity of exploiting the big data sphere of the internet are collectively having the effect of marginalising the study of traditional objects of study in the Humanities, particularly those of the more distant past.'
-    },
-    {
       'definition': 'The digital humanities is about creating people. Creating people who intersect with and apply the tools and methods of computer science using the principles, values, and techniques of the humanities.'
     },
     {
@@ -92,9 +89,6 @@ export class DefinitionsService {
     },
     {
       'definition': 'Digital Humanities is the combination of using digital techniques to better understand and present our understanding of the Humanities. It is about the dissemination of our work, the sharing of knowledge and collaborating to give the best possible chance to a project. Digital Humanities is about the Community, about learning, constantly evolving and being open to new ways of thinking about old questions. It is not, as a friend asked, about building digital humans.'
-    },
-    {
-      'definition': 'I would define Digital Humanities as a term used to identify persons, practices, ideologies, etc., that conform to institutional and scholarly values as determined by individual and institutional norms. But I would distinguish the definition of DH from doing digital humanities work (theoretical, practical, critical), which means something much more. Doing digital humanities means challenging the institutionalization of humanistic inquiry; in fact, it means responding to the crippling institutionalization of emotive responses to humanistic practices within the public sphere of all “knowledge workers.” To do this means that we must build tools, technologies, methodologies, and theories that represent this disruptive force, but we must also put what we build into practice. It is not longer enough to present (or represent) an idea, a tool; we must do the work of the community and we must engage the community in developing the ways in which we make our (our as in humanity) work accessible (this means disability studies needs to become a stronger focus of our scholarship and our practices). We must, as Alan Liu argued practice being the service community that we have always wanted to become.'
     },
     {
       'definition': 'Qualitative queries, quantified.'
@@ -161,9 +155,6 @@ export class DefinitionsService {
     },
     {
       'definition': 'Digital humanities is a gathering term for scholars who embrace technology as a means to explore humanities material as data.'
-    },
-    {
-      'definition': 'What it really comes down to is what are people doing to contribute to an understanding of the digital age or what are they doing to expand the practices and work of humanities fields using current technology. A person is not a Digital Humanist by mistake. They are not a Digital Humanist simply because they use a computer to do their work nor are they a Digital Humanist simply by virtue of working in a humanities field and being able to program. What is the methodological framework for their work? For example, using JuXta for collation on a new edition of a novel for the sake of efficiency does not make that edition a DH project, but writing about how the use of JuXta changes the way that we create scholarly editions of literature would fall into the DH field. Essentially, whether or not a person is trying to engage with DH, whether in theory or in practice, determines whether or not they are a Digital Humanist.'
     },
     {
       'definition': 'its the sum of a lot of separate activities involving doing humanities research and using computers at more or less the same time, and with at least an intermittent element of methodological reflection.'
@@ -721,9 +712,6 @@ export class DefinitionsService {
       'definition': 'Using computational tools to do the work of the humanities.'
     },
     {
-      'definition': 'Where the English department surrenders to the Media Arts department under the conditions that they remain in charge of what storytelling means in the 21st century. Hehe. Just kidding. The merging of Literature, Media Arts and other schools of storytelling and criticism into an emergent network that benefits from history but lacks the downside and fixed ideas of entrenched interests be it in the classroom, the boardroom or copyright office. This is an attempt to cast a wider net to include social media and the democratization of media production into the literary cannon complete with thoughtful and insightful analysis and scholarly study and reportage. Literature department walls become osmotic membranes and connecting tissue between liberal arts scholarship in academia, art, technology and social media content producers. DH is a conceptual location where good ideas, best practices and innovation is encouraged. Transdisciplinarity is the new DH Norm. DH is a network aggregate university. While individual universities are slow to change, the networked body consisting of DH individuals from many different universities can combine to evolve an educational ecosystem that thrives on change, embraces technology, plurality and open doors, while benefitting from the support of traditional educational organization.'
-    },
-    {
       'definition': 'Opening up new knowledge and new ways of learning through the application of digital technologies to any humanities subject.'
     },
     {
@@ -1030,9 +1018,6 @@ export class DefinitionsService {
       'definition': 'Digital Humanities are the application and the use of computing tecnologies for the research, teaching and investigation in the disciplines of the humanities.'
     },
     {
-      'definition': 'For me Digital Humanities is the filed where the information is delivered in an electronic form to an audience in the humanities field. today the delivery of the information in an electronic form almost has no boundaries. One could easily send a message to one or multiple recipients just from his email account, posting on a blog or simply from his Facebook account (posting a Wall status update). The users around the world are all interconnected together and regardless if one chose to send a message from his yahoo account to an AOL one that is totally possible as now all the separated networks (e.g. AOL, Yahoo) are connected under one umbrella: The Internet. Before, one AOL user was able to send a message just to the members from his network (AOL). Today, the technical developments made possible that everybody could be connected in real time, to anyone else. The information in electronic form can be transmitted not just to those proficient in computing science but also to those interested in modem languages, law, or arts. The capability and easiness of how the digital information can be transmitted/shared/used, not just between and to computing science  related individuals but also to humanities related ones, is the core of the digital humanities field.'
-    },
-    {
       'definition': 'Digital Humanities is to me the use and abuse of technology to potential improve study within the field of humanities. It stretches from a simple blog to complex corpus tools to whatever the next person can think of.'
     },
     {
@@ -1334,12 +1319,6 @@ export class DefinitionsService {
     },
     {
       'definition': 'For me, Humanities Computing means the transformation of creative and informative communication (for all individuals, not just academics, students and other experts) via an ever- and expanding array of information and communication technologies, an amplification of the individuals power to research, to write, to communicate, to publish and to participate in, and create new spaces in, the public sphere. Just as I feel that the Humanities enrich everyones life, humanities transformed by ICTs enrich everyones life.'
-    },
-    {
-      'definition': 'I broadly define Humanities Computing/Digital Humanities as a field in which scholars within the humanities use or study computers or a digital environment (e.g. the WWW, video games, etc.) in their research.  I consider myself to be a digital humanities researcher because I am studying digital short fiction and its communities in my thesis, but also because I sometimes use social science methods and computing tools (online questionnaires, quantitative/qualitative analysis, etc.), which reflects the interdisciplinary nature of humanities computing.  Although I am currently completing a Ph.D. in English, my M.A. in Humanities Computing and Comparative Literature from the University of Alberta has helped me to approach my research from a more interdisciplinary perspective-- something that I see as being an integral part of humanities computing/digital humanities.'
-    },
-    {
-      'definition': 'Digital humanities studies the intersection and mutual influence of humanities ideas and digital methods, with the goal of understanding how the use of digital technologies and approaches alters the practice and theory of humanities scholarship. In this sense it is concerned with studying the emergence of scholarly disciplines and communicative practices at a time when those are in flux, under the influence of rapid technological, institutional and cultural change. As a way of identifying digital interests and efforts within traditional humanities fields, the term “digital humanities” also identifies, in a general way, any kind of critical engagement with digital tools and methods in a humanities context. This includes the creation of digital editions and digital text or image collections, and the creation and use of digital tools for the investigation and analysis of humanities research materials.'
     },
     {
       'definition': 'Digital Humanities to me encompasses any of a multitude of approaches to the arts and humanities that address and embrace the empowering societal shifts afforded by technology.  Digital Humanities is about open communication, collaboration and expression.  It mirrors my own artistic process of A/R/Tograpy, in that DH incorporates art, research and technology.  It is about discovery and sharing as much as it is about archival and data visualization.  Above all, Digital Humanities is about shedding light on the human experience and ultimately our own interconnectedness.'
@@ -1931,9 +1910,6 @@ export class DefinitionsService {
     },
     {
       'definition': 'Humanities research that uses computational methodologies from a variety of fields.'
-    },
-    {
-      'definition': 'I view DH as digitally-enabled knowledges, techniques and approaches that may, under certain conditions, permit the creation and leveraging of a very particular space. In particular, DH may facilitate possibilities that exist in environments resultant from the convergence of technologies in synergistic, human-centered, and project-based rubrics. Critical understandings related to this paradigm may include disassociation from any one particular tool and/or series of objects, the flexibility to merge and combine tools and conceptual frameworks to fit particular goals and/or participants, and the willingness to blend and combine legacy technologies with techniques not yet created. Throughout- a focus on mixing methodologies as well as tools, approaching DH with a spirit of training, and beginning every project with the pedagogical generosity to teach as well as learn- may serve to catalyze rich creation and the innovation that can result in creative and conceptual breakthroughs.'
     },
     {
       'definition': '21st-century humanities research, teaching, and life.'
