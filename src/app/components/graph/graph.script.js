@@ -80,10 +80,6 @@ function drawDashboard() {
   google.visualization.events.addListener(YearFilter, 'statechange', stateChangeHandler);
   function stateChangeHandler() {
     yearSelected = YearFilter.visualization.K.value;
+    localStorage.setItem('yearSelected', yearSelected);
   }
 }
-
-// module.exports = {
-//   yearSelected : yearSelected
-// };
-
