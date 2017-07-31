@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { GraphComponent } from './components/graph/graph.component';
-import { GenreInfoComponent } from './old/genre-info/genre-info.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
@@ -14,7 +13,6 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HeaderComponent,
     GraphComponent,
-    GenreInfoComponent,
     FooterComponent
   ],
   imports: [

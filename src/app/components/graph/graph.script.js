@@ -49,7 +49,9 @@ var graphModule = function(updateYear) {
     dashboard.draw(data);
     google.visualization.events.addListener(YearFilter, 'statechange', stateChangeHandler);
     function stateChangeHandler() {
-      updateYear(YearFilter.visualization.K.value);
+      var value = YearFilter.visualization.K.value;
+      // if ()
+      updateYear(value);
     }
   }
 };

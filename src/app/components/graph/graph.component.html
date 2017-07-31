@@ -1,18 +1,20 @@
-<div id="dashboard_div" class="container">
-  <div class="row">
-    <!--<div id="filter_div" class="col-6"></div>-->
-    <div id="filter_div2"></div>
-  </div>
-  <div class="row" *ngIf="!(yearSelected == '')">
-    <h1 class="col-11 display-4">The most popular genre of {{yearSelected}} is {{genre}}</h1>
-    <a class="col-1 btn btn-default align-next-to" (click)="learn()" role="button">learn about {{genre}} &raquo;</a>
-  </div>
-  <div class="row" *ngIf="showMore">
+<section id="graph">
+  <div id="dashboard_div" class="container">
+    <div class="row">
+      <!--<div id="filter_div" class="col-6"></div>-->
+      <div id="filter_div2"></div>
+    </div>
+    <div class="row" *ngIf="!(yearSelected == '')">
+      <h1 class="col-11 display-4">The most popular genre of {{yearSelected}} is {{genre}}</h1>
+      <a class="col-1 btn btn-default align-next-to" (click)="learn()" role="button">learn about {{genre}} &raquo;</a>
+    </div>
+    <div class="row" *ngIf="showMore">
+      <br>
+      <p class="blockquote def">{{ about }}</p>
+      <a class="btn btn-default btn-sm align-next-to" (click)="showMore = !showMore" role="button">hide &raquo;</a>
+    </div>
     <br>
-    <p class="blockquote def">{{ about }}</p>
-    <a class="btn btn-default btn-sm align-next-to" (click)="showMore = !showMore" role="button">hide &raquo;</a>
+    <div id="chart_div" class="row"></div>
   </div>
-  <br>
-  <div id="chart_div" class="row"></div>
-</div>
+</section>
 
