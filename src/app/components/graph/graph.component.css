@@ -11,6 +11,8 @@ input {
   font-family: inherit;
 }
 .align-next-to {
-  transform: translate(0%,50%);
-  padding: 0;
+  padding: 15px;
+}
+.light-text {
+  font-weight: 300;
 }

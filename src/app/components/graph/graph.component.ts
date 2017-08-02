@@ -31,11 +31,7 @@ export class GraphComponent implements OnInit {
     'Funk' : 'Funk is a music genre that originated in the mid-1960s when African American musicians created a rhythmic, danceable new form of music through a mixture of soul music, jazz, and rhythm and blues (R&B). Funk de-emphasizes melody and chord progressions used in other related genres and brings a strong rhythmic groove of a bass line played by an electric bassist and a drum part played by a drummer to the foreground. ',
     'Blues' : 'Blues is a genre and musical form originated by African Americans in the Deep South of the United States around the end of the 19th century. The genre developed from roots in African musical traditions, African-American work songs, spirituals, and folk music. Blues incorporated spirituals, work songs, field hollers, shouts, chants, and rhymed simple narrative ballads. The blues form, ubiquitous in jazz, rhythm and blues and rock and roll, is characterized by the call-and-response pattern, the blues scale and specific chord progressions, of which the twelve-bar blues is the most common.',
   };
-  genreOfYear = {
-    '2016': 'Pop',
-    '2015': 'Rock',
-    '2014': 'Jazz'
-  };
+  genreOfYear = {'1941': 'Jazz', '1942': 'Jazz', '1943': 'Jazz', '1944': 'Pop', '1945': 'Jazz', '1946': 'Pop', '1947': 'Pop', '1948': 'Pop', '1949': 'Pop', '1950': 'Pop', '1951': 'Pop', '1952': 'Pop', '1953': 'Pop', '1954': 'Pop', '1955': 'Pop', '1956': 'Pop', '1957': 'Pop', '1958': 'Rock', '1959': 'Rock', '1960': 'Rock', '1961': 'Pop', '1962': 'Pop', '1963': 'Pop', '1964': 'Pop', '1965': 'Pop', '1966': 'Rock', '1967': 'Pop', '1968': 'Pop', '1969': 'Pop', '1970': 'Pop', '1971': 'Pop', '1972': 'Pop', '1973': 'Pop', '1974': 'Pop', '1975': 'Pop', '1976': 'Pop', '1977': 'Pop', '1978': 'Pop', '1979': 'Pop', '1980': 'Pop', '1981': 'Pop', '1982': 'Pop', '1983': 'Pop', '1984': 'Pop', '1985': 'Pop', '1986': 'Pop', '1987': 'Pop', '1988': 'Pop', '1989': 'Pop', '1990': 'Pop', '1991': 'Pop', '1992': 'Pop', '1993': 'Pop', '1994': 'Pop', '1995': 'Rock', '1996': 'Rock', '1997': 'Pop', '1998': 'Pop', '1999': 'Pop', '2000': 'Pop', '2001': 'R&B', '2002': 'Hip Hop', '2003': 'Hip Hop', '2004': 'Hip Hop', '2005': 'Hip Hop', '2006': 'Hip Hop', '2007': 'Hip Hop', '2008': 'R&B', '2009': 'Pop', '2010': 'Hip Hop', '2011': 'Hip Hop', '2012': 'Pop', '2013': 'Pop', '2014': 'Pop', '2015': 'Pop', '2016': 'Hip Hop'};
   ngOnInit() {
     graphModule(this.updateYear);
   }

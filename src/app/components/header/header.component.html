@@ -4,14 +4,15 @@
     <hr>
     <p class="lead">
       As a part of a Digital Humanities project,
-      we analyzed people favorite genre in the last 70 years,
-      this by looking at "Top 100 Billboards",
-      and visualized the results for you in a cool chart.
+      we analyzed people's favorite genres in the last 70 years,
+      by looking at "Top 100 Billboards",
+      and visualizing the results for you in a cool chart.
     </p>
     <br>
-    <div>
-      <a class="btn btn-primary btn-lg" role="button" href="#" id="scroll-btn">Check it out</a>
-      <a class="btn btn-default btn-lg"  (click)="getDef()" role="button">What is Digital Humanities?</a>
+    <div class="row">
+      <a class="col-4 btn btn-primary btn-lg" role="button" href="#" id="scroll-btn">Check it out</a>
+      <a class="col-4 btn btn-secondary btn-lg"  (click)="getDef()" role="button">What is Digital Humanities?</a>
+      <a class="col-4 btn btn-secondary btn-lg" href="./files/genresFiles.zip" role="button">Download the data</a>
     </div>
   </div>
   <div class="container" *ngIf="showDef">

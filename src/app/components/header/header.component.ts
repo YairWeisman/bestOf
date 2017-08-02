@@ -23,6 +23,7 @@ export class HeaderComponent {
     this.def = this.definitions[this.i].definition;
     this.i++;
   }
+  downloadData() {}
 
 
 }
