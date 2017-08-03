@@ -1,4 +1,4 @@
-var graphModule = function(updateYear) {
+var graphModule = function(updateYear, resetYear) {
   google.charts.load('current', {'packages':['corechart', 'controls']});
   google.charts.setOnLoadCallback(drawDashboard);
   function drawDashboard() {
@@ -26,11 +26,6 @@ var graphModule = function(updateYear) {
       'options': {
         'width': 1224,
         'height': 220,
-        // 'series': {
-        //   '0': {'axis': 'number of Pop songs'},
-        //   '1': {'axis': 'number of Rock songs'},
-        //   '2': {'axis': 'number of Jazz songs'}
-        // },
         'tooltip': {
           'tooltip': {isHtml: true}
         },
@@ -68,7 +63,7 @@ var graphModule = function(updateYear) {
       var value = YearFilter.visualization.K.value;
       if (value.length > 3) {
         updateYear(value);
-      }
+      } else resetYear();
     }
     function attachTextToGenre(genre) {
       return genre+' songs in this year \'Top Billboards\''
