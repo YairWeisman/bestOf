@@ -4,12 +4,6 @@ h1.col-4 {
 h1.col-1 {
   margin-right: -34px;
 }
-input {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 33px;
-  font-family: inherit;
-}
 .align-next-to {
   padding: 15px;
 }
