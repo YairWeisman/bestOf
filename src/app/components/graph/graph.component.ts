@@ -14,7 +14,7 @@ export class GraphComponent implements OnInit {
   showMore = false;
   about = '';
   yearSelected = '';
-  genersInfo = {
+  genresInfo = {
     'Pop': 'Pop music is a genre of popular music that originated in its modern form in the United States and United Kingdom during the mid-1950s.The terms popular music and pop music are often used interchangeably though they differ. Pop song usually have a good rhythm, a catchy melody, and are easy to remember and sing along to. They usually have a chorus that repeats several times and two or more verses. Most pop songs are between two and five minutes long, and the lyrics are usually about the joys and problems of love and relationships. ',
     'Rock': 'Rock music is a genre of popular music that originated as rock and roll in the United States in the early 1950s, and developed into a range of different styles in the 1960s and later, particularly in the United Kingdom and the United States.The sound of rock is traditionally centered on the amplified electric guitar, which emerged in its modern form in the 1950s with the popularization of rock and roll, and was influenced by the sounds of electric blues guitarists',
     'Jazz': 'Jazz is a music genre that originated in African American communities of New Orleans, United States, in the late 19th and early 20th centuries, and developed from roots in blues and ragtime. Since the 1920s Jazz Age, jazz has become recognized as a major form of musical expression. Jazz is characterized by swing and blue notes, call and response vocals, polyrhythms and improvisation. Jazz has roots in West African cultural and musical expression, and in African-American music traditions including blues and ragtime, as well as European military band music.',
@@ -37,7 +37,7 @@ export class GraphComponent implements OnInit {
   }
   learn() {
     this.showMore = true;
-    this.about = this.genersInfo[this.genre];
+    this.about = this.genresInfo[this.genre];
   }
   updateYear(year) {
     this.yearSelected = year;

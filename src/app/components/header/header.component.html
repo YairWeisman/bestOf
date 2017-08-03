@@ -10,14 +10,15 @@
     </p>
     <br>
     <div class="row">
-      <a class="col-4 btn btn-primary btn-lg" role="button" href="#" id="scroll-btn">Check it out</a>
-      <a class="col-4 btn btn-secondary btn-lg"  (click)="getDef()" role="button">What is Digital Humanities?</a>
+      <a class="col-4 btn btn-primary btn-lg" role="button" href="#" id="scroll-btn">See the chart</a>
+      <a class="col-4 btn btn-secondary btn-lg"  (click)="getDef()" role="button">{{(!showDef ? 'What is Digital Humanities?' : 'Another definition')}}</a>
       <a class="col-4 btn btn-secondary btn-lg" href="./files/genresFiles.zip" role="button">Download the data</a>
     </div>
-  </div>
-  <div class="container" *ngIf="showDef">
-    <br>
-    <p class="blockquote def">{{ def }}</p>
-    <a class="btn btn-default btn-sm"  (click)="getDef()" role="button">Another definition &raquo;</a>
+    <div class="container"  id="definition" *ngIf="showDef">
+      <br>
+      <div class="alert alert-info" role="alert">{{ def }}</div>
+      <a class="btn btn-primary btn-sm" href="#" (click)="getDef()" role="button">Another definition</a>
+      <a class="btn btn-secondary btn-sm"  (click)="showDef = !showDef" role="button">Hide</a>
+    </div>
   </div>
 </div>
