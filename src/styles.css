@@ -3,3 +3,13 @@
   font-size: 1.25rem;
   font-weight: 300;
 }
+
+.select-text input {
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 300;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 6em;
+}

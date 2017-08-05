@@ -26,7 +26,6 @@ var graphModule = function(updateYear, resetYear) {
       'chartType': 'ColumnChart',
       'containerId': 'chart_div',
       'options': {
-        'width': 1224,
         'height': 220,
         'tooltip': {
           'tooltip': {isHtml: true}

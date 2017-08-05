@@ -3,22 +3,22 @@
     <h1 class="display-2">The Genre Of The Year</h1>
     <hr>
     <p class="lead">
-      As a part of a Digital Humanities project,
-      we analyzed people's favorite genres in the last 70 years,
-      by looking at "Top 100 Billboards",
-      and visualizing the results for you in a cool chart.
+      As a part of a Digital Humanities course for computer science students from Ben Gurion University,
+      we analyzed people's favorite genres from 1941 to 2016. The process include
+      parsing of "Top 100 Billboards" tables, extracting the data from the internet, sorting into genres and years,
+      and finally visualizing the results.
     </p>
     <br>
     <div class="row">
-      <a class="col-4 btn btn-primary btn-lg" role="button" href="#" id="scroll-btn">See the chart</a>
-      <a class="col-4 btn btn-secondary btn-lg"  (click)="getDef()" role="button">{{(!showDef ? 'What is Digital Humanities?' : 'Another definition')}}</a>
-      <a class="col-4 btn btn-secondary btn-lg" href="./files/genresFiles.zip" role="button">Download the data</a>
+      <a class="col-4 btn btn-primary btn-lg" href="#" id="scroll-btn">See the results</a>
+      <a class="col-4 btn btn-secondary btn-lg" href="./files/genresFiles.zip">Download the data</a>
+      <a class="col-4 btn btn-secondary btn-lg" href="#" (click)="getDef()">{{(!showDef ? 'What is Digital Humanities?' : 'Another definition')}}</a>
     </div>
     <div class="container"  id="definition" *ngIf="showDef">
       <br>
       <div class="alert alert-info" role="alert">{{ def }}</div>
       <a class="btn btn-primary btn-sm" href="#" (click)="getDef()" role="button">Another definition</a>
-      <a class="btn btn-secondary btn-sm"  (click)="showDef = !showDef" role="button">Hide</a>
+      <a class="btn btn-secondary btn-sm" href="#" (click)="showDef = !showDef" role="button">Hide</a>
     </div>
   </div>
 </div>
