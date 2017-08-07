@@ -9,4 +9,6 @@ h1.col-1 {
 }
 .light-text {
   font-weight: 300;
+  margin-right: 1em;
+  vertical-align: middle;
 }
