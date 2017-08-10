@@ -14,7 +14,7 @@
       <a class="col-4 btn btn-secondary btn-lg" href="./files/genresFiles.zip">Download the data</a>
       <a class="col-4 btn btn-secondary btn-lg" href="#" (click)="getDef()">{{(!showDef ? 'What is Digital Humanities?' : 'Another definition')}}</a>
     </div>
-    <div class="container"  id="definition" *ngIf="showDef">
+    <div class="container"  id="definition" *ngIf="showDef" [@fadeInOut]>
       <br>
       <div class="alert alert-info" role="alert">{{ def }}</div>
       <a class="btn btn-primary btn-sm" href="#" (click)="getDef()" role="button">Another definition</a>

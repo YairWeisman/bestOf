@@ -13,3 +13,7 @@
   text-align: center;
   width: 6em;
 }
+
+.emphasize-text {
+  font-weight: 800;
+}

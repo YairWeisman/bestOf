@@ -1,15 +1,29 @@
 import {Component, OnInit } from '@angular/core';
 import { graphModule } from './graph.script';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-graph',
   templateUrl: './graph.component.html',
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [   // :enter is alias to 'void => *'
+        style({opacity:0}),
+        animate(1000, style({opacity:1})),
+
+      ]),
+      transition(':leave', [   // :leave is alias to '* => void'
+        animate(500, style({opacity:0}))
+      ])
+    ])
+  ],
   styleUrls: ['./graph.component.css']
 })
 export class GraphComponent implements OnInit {
   constructor() {
     this.updateYear = this.updateYear.bind(this);
     this.resetYear = this.resetYear.bind(this);
+    this.notInRange = this.notInRange.bind(this);
   }
   genre = '';
   showMore = false;
@@ -34,7 +48,7 @@ export class GraphComponent implements OnInit {
   };
   genreOfYear = {'1941': 'Jazz', '1942': 'Jazz', '1943': 'Jazz', '1944': 'Pop', '1945': 'Jazz', '1946': 'Pop', '1947': 'Pop', '1948': 'Pop', '1949': 'Pop', '1950': 'Pop', '1951': 'Pop', '1952': 'Pop', '1953': 'Pop', '1954': 'Pop', '1955': 'Pop', '1956': 'Pop', '1957': 'Pop', '1958': 'Rock', '1959': 'Rock', '1960': 'Rock', '1961': 'Pop', '1962': 'Pop', '1963': 'Pop', '1964': 'Pop', '1965': 'Pop', '1966': 'Rock', '1967': 'Pop', '1968': 'Pop', '1969': 'Pop', '1970': 'Pop', '1971': 'Pop', '1972': 'Pop', '1973': 'Pop', '1974': 'Pop', '1975': 'Pop', '1976': 'Pop', '1977': 'Pop', '1978': 'Pop', '1979': 'Pop', '1980': 'Pop', '1981': 'Pop', '1982': 'Pop', '1983': 'Pop', '1984': 'Pop', '1985': 'Pop', '1986': 'Pop', '1987': 'Pop', '1988': 'Pop', '1989': 'Pop', '1990': 'Pop', '1991': 'Pop', '1992': 'Pop', '1993': 'Pop', '1994': 'Pop', '1995': 'Rock', '1996': 'Rock', '1997': 'Pop', '1998': 'Pop', '1999': 'Pop', '2000': 'Pop', '2001': 'R&B', '2002': 'Hip Hop', '2003': 'Hip Hop', '2004': 'Hip Hop', '2005': 'Hip Hop', '2006': 'Hip Hop', '2007': 'Hip Hop', '2008': 'R&B', '2009': 'Pop', '2010': 'Hip Hop', '2011': 'Hip Hop', '2012': 'Pop', '2013': 'Pop', '2014': 'Pop', '2015': 'Pop', '2016': 'Hip Hop'};
   ngOnInit() {
-    graphModule(this.updateYear, this.resetYear);
+    graphModule(this.updateYear, this.resetYear, this.notInRange);
   }
   learn() {
     this.showMore = true;
@@ -45,6 +59,10 @@ export class GraphComponent implements OnInit {
     this.genre = this.genreOfYear[this.yearSelected];
   }
   resetYear() {
+    this.yearSelected = '';
+  }
+  notInRange() {
+    alert('Please select a year in the range.');
     this.yearSelected = '';
   }
 }

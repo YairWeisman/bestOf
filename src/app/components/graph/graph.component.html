@@ -1,15 +1,14 @@
 <section id="graph">
   <div id="dashboard_div" class="container">
     <p class="select-text">The following column chart shows the number of songs per genre in every "Top Billboards" from 1941 to 2016:</p>
-    <div class="row" *ngIf="!(yearSelected == '')">
+    <div class="row" *ngIf="!(yearSelected == '')" [@fadeInOut]>
       <h1 class="col-9 display-5 light-text">The most popular genre of {{yearSelected}} is {{genre}}</h1>
       <div *ngIf="!(yearSelected == '')" class="col-2">
         <a *ngIf="!showMore" class="btn btn-primary btn-sm align-next-to" href="#about" (click)="learn()">Learn about {{genre}}</a>
-        <!--<a *ngIf="showMore" class="btn btn-primary btn-sm align-next-to"  href="#graph">See the chart</a>-->
         <a *ngIf="showMore" class="btn btn-secondary btn-sm align-next-to"  href="#" (click)="showMore = !showMore">Hide</a>
       </div>
     </div>
-    <div class="row" *ngIf="(showMore && !(yearSelected == ''))" id="about">
+    <div class="row" *ngIf="(showMore && !(yearSelected == ''))" id="about" [@fadeInOut]>
       <br>
       <p class="blockquote def">{{ about }}</p>
     </div>

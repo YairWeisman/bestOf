@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     NgbModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
