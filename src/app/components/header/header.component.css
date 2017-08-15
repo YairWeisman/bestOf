@@ -13,3 +13,8 @@
   margin-bottom: 0;
 }
 
+.credit {
+  font-size: 0.5em;
+  color: #6a6a6a;
+  float: right;
+}

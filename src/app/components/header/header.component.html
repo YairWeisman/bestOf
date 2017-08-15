@@ -4,14 +4,14 @@
     <hr>
     <p class="lead">
       As a part of a Digital Humanities course for computer science students from Ben Gurion University,
-      we analyzed people's favorite genres from 1941 to 2016. The process include
-      parsing of "Top 100 Billboards" tables, extracting the data from the internet, sorting into genres and years,
+      we analyzed people's favorite genres from 1941 to 2016. The process included
+      analyzing of "Top 100 Billboards" tables and automatically extracting the genre from Wikipedia, sorting the data,
       and finally visualizing the results.
     </p>
     <br>
     <div class="row">
       <a class="col-4 btn btn-primary btn-lg" href="#" id="scroll-btn">See the results</a>
-      <a class="col-4 btn btn-secondary btn-lg" href="./files/genresFiles.zip">Download the data</a>
+      <a class="col-4 btn btn-secondary btn-lg" href="/files/genresFiles.zip">Download the data</a>
       <a class="col-4 btn btn-secondary btn-lg" href="#" (click)="getDef()">{{(!showDef ? 'What is Digital Humanities?' : 'Another definition')}}</a>
     </div>
     <div class="container"  id="definition" *ngIf="showDef" [@fadeInOut]>
@@ -19,6 +19,7 @@
       <div class="alert alert-info" role="alert">{{ def }}</div>
       <a class="btn btn-primary btn-sm" href="#" (click)="getDef()" role="button">Another definition</a>
       <a class="btn btn-secondary btn-sm" href="#" (click)="showDef = !showDef" role="button">Hide</a>
+      <p class="credit">Thank to WhatIsDigitalHumanities.com for the definitions</p>
     </div>
   </div>
 </div>

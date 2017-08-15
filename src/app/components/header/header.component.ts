@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {DefinitionsService} from '../../services/definitions.service';
 import {animate, style, transition, trigger} from '@angular/animations';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
